@@ -47,7 +47,7 @@ DISABLE_IPV6="false"
 ALLOWED_SIGN_UP_EMAIL_DOMAINS=""
 BEDROCK_REGION="us-east-1"
 CDK_JSON_OVERRIDE="{}"
-REPO_URL="https://github.com/ApplyingCloudOrg/PULSCRP-IA01-CHATBOT-AGENT.git"
+REPO_URL="https://github.com/Anr2112/bedrock-chat.git"
 VERSION="main"
 
 # Parse command-line arguments for customization
