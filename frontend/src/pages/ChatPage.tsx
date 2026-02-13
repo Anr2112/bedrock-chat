@@ -582,15 +582,15 @@ const ChatPage: React.FC = () => {
                             
                             <p className="mb-4">Encuentra en segundos la información que necesitas:</p>
                             
-                            <p className="mb-4">📁 Documentos del Sistema Integrado de Gestión (SIG) Políticas, Procedimientos, Instructivos, Formatos, Planes, Programas, y más.</p>
+                            <p className="mb-4">📁<strong> Documentos del Sistema Integrado de Gestión (SIG):</strong><br/>Políticas, Procedimientos, Instructivos, Formatos, Planes, Programas, y más.</p>
                             
-                            <p className="mb-4">⚙️ Calibración y mantenimiento de Equipos Médicos Información sobre con los certificados de calibración y mantenimiento de los equipos médicos de todas las sedes.</p>
+                            <p className="mb-4">⚙️ <strong>Calibración y mantenimiento de Equipos Médicos:</strong><br/>Información sobre con los certificados de calibración y mantenimiento de los equipos médicos de todas las sedes.</p>
                             
-                            <p className="mb-4">👩‍⚕️ Documentos o legajos de nuestros talentos CVs, Habilidades, Certificados de Trabajo.</p>
+                            <p className="mb-4">👩‍⚕️ <strong>Documentos o legajos de nuestros talentos:</strong><br/>CVs, Habilidades, Certificados de Trabajo.</p>
                             
-                            <p className="mb-4">📜 Licencias y permisos Documentación legal vigente</p>
+                            <p className="mb-4">📜 <strong>Licencias y permisos:</strong><br/>Documentación legal vigente</p>
                             
-                            <p className="mb-4">🛡️ Auditorías de Seguridad y Salud en el Trabajo Planes, Programas, Capacitaciones, Inspección, Brigada, Matriz IPERC, Mapa de Riesgos</p>
+                            <p className="mb-4">🛡️ <strong>Auditorías de Seguridad y Salud en el Trabajo:</strong><br/>Planes, Programas, Capacitaciones, Inspección, Brigada, Matriz IPERC, Mapa de Riesgos</p>
                             
                             <p className="mb-4">✍️ Solo escribe lo que estás buscando El asistente te mostrará el contenido o te permitirá descargarlo.</p>
                             
