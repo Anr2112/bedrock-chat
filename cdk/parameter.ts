@@ -6,5 +6,5 @@ export const bedrockChatParams = new Map<string, BedrockChatParametersInput>();
 
 // Default environment with pulso-salud prefix
 bedrockChatParams.set("default", {
-  envPrefix: "PULSCRP-IA01-ADOC-ADP",
+  envPrefix: "pulscrp-ia01-adoc-adp",
 });

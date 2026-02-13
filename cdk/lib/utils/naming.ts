@@ -4,7 +4,7 @@
 export class NamingHelper {
   private readonly prefix: string;
 
-  constructor(prefix: string = 'PULSCRP-IA01-ADOC-ADP') {
+  constructor(prefix: string = 'pulscrp-ia01-adoc-adp') {
     this.prefix = prefix;
   }
 

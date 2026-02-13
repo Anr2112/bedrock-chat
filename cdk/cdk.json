@@ -52,7 +52,7 @@
     "@aws-cdk/aws-autoscaling:generateLaunchTemplateInsteadOfLaunchConfig": true,
     "@aws-cdk/core:includePrefixInUniqueNameGeneration": true,
     "@aws-cdk/aws-opensearchservice:enableOpensearchMultiAzWithStandby": true,
-    "resourcePrefix": "PULSCRP-IA01-ADOC-ADP",
+    "resourcePrefix": "pulscrp-ia01-adoc-adp",
     "bedrockRegion": "us-east-1",
     "enableFrontendIpv6": true,
     "enableFrontendWaf": true,
