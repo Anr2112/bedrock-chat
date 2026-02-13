@@ -599,7 +599,7 @@ Las categorías de clasificación son:
       },
     },
     discover: {
-      pageTitle: 'Descubre mas Bots',
+      pageTitle: 'Descubre más Bots',
       description:
         'Ver y buscar bots que sean públicos o para los que tengas permiso de acceso.',
       search: {
@@ -613,13 +613,13 @@ Las categorías de clasificación son:
       essential: {
         label: 'Essential',
         description:
-          'These bots are officially selected by administrators. Use them actively to improve your work efficiency as part of standard operations.',
+          'Estos bots son seleccionados oficialmente por los administradores. Úsalos activamente para mejorar la eficiencia de tu trabajo como parte de las operaciones estándar.',
         noEssentialBotsMessage: {
-          title: 'No Essential Bots',
-          content: `Essential section is hidden for non-admin users since there are no Essential bots.<br/>
-          Bots shared with All Users can be marked as Essential.<br/>
-          Use the bot menu in Chat, My Bots, Starred Bots, or Recently Used Bots views to mark a bot as Essential.<br/>
-          Click the <MenuButton/> button on these views to access the menu.`,
+          title: 'No hay bots esenciales',
+          content: `La sección de esenciales está oculta para los usuarios que no son administradores, ya que no hay bots esenciales.<br/>
+          Los bots compartidos con todos los usuarios pueden marcarse como esenciales.<br/>
+          Utiliza el menú de bots en las vistas de Chat, Mis Bots, Bots Favoritos o Bots Recientemente Usados para marcar un bot como esencial.<br/>
+          Haz clic en el botón <MenuButton/> en estas vistas para acceder al menú.`,
         },
       },
       trending: {

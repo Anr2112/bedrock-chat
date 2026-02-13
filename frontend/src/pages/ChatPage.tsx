@@ -550,10 +550,10 @@ const ChatPage: React.FC = () => {
           <img 
             src="/images/pulso_salud_original.svg" 
             alt="Pulso Salud" 
-            className="absolute right-2 top-2 h-8 object-contain"
+            className="absolute right-10 top-3 h-12 object-contain"
           />
           {getPostedModel() && (
-            <div className="absolute right-2 top-11 text-xs text-dark-gray dark:text-light-gray">
+            <div className="absolute right-10 top-16 text-xs text-dark-gray dark:text-light-gray">
               model: {getPostedModel()}
             </div>
           )}
@@ -569,42 +569,36 @@ const ChatPage: React.FC = () => {
                 <div className="relative mb-[45vh]  flex w-full flex-col items-center justify-center">
                   {!loadingConversation && (
                     <>
-                      <div className="absolute  top-0 right-auto mt-4 ">
+                      <div className="absolute top-0 right-auto mt-4 z-20">
                         <SwitchBedrockModel
                           className="w-min"
                           activeModels={activeModels}
                           botId={botId}
                         />                        
                       </div>
-                      <div id='dummytext' className="absolute top-16 w-11/12 md:w-10/12 lg:w-4/6 xl:w-3/6 text-sm mt-6 rounded bg-aws-squid-ink-light/5 p-4 text-black dark:bg-aws-squid-ink-dark/5">
+                      <div id='dummytext' className="absolute top-16 z-10 w-11/12 md:w-10/12 lg:w-4/6 xl:w-3/6 text-sm mt-6 rounded bg-aws-squid-ink-light/5 p-4 text-black dark:bg-aws-squid-ink-dark/5">
                           <div className="font-bold">🚀 Bienvenido al Asistente Corporativo de Pulso Salud </div>
                             <p>Tu acceso inteligente a la documentación oficial y vigente de la organización.</p>
                             
-                            <p>Encuentra en segundos la información que necesitas:</p>
+                            <p className="mb-4">Encuentra en segundos la información que necesitas:</p>
                             
-                            <p>📁 Documentos del Sistema Integrado de Gestión (SIG) 
-                            Políticas, Procedimientos, Instructivos, Formatos, Planes, Programas, y más.</p>
+                            <p className="mb-4">📁 Documentos del Sistema Integrado de Gestión (SIG) Políticas, Procedimientos, Instructivos, Formatos, Planes, Programas, y más.</p>
                             
-                            <p>⚙️ Calibración y mantenimiento de Equipos Médicos
-                            Información sobre con los certificados de calibración y mantenimiento de los equipos médicos de todas las sedes.</p>  
+                            <p className="mb-4">⚙️ Calibración y mantenimiento de Equipos Médicos Información sobre con los certificados de calibración y mantenimiento de los equipos médicos de todas las sedes.</p>
                             
-                            <p>👩‍⚕️ Documentos o legajos de nuestros talentos
-                            CVs, Habilidades, Certificados de Trabajo.</p>
+                            <p className="mb-4">👩‍⚕️ Documentos o legajos de nuestros talentos CVs, Habilidades, Certificados de Trabajo.</p>
                             
-                            <p>📜 Licencias y permisos
-                            Documentación legal vigente</p>
+                            <p className="mb-4">📜 Licencias y permisos Documentación legal vigente</p>
                             
-                            <p>🛡️ Auditorías de Seguridad y Salud en el Trabajo
-                            Planes, Programas, Capacitaciones, Inspección, Brigada, Matriz IPERC, Mapa de Riesgos</p>
+                            <p className="mb-4">🛡️ Auditorías de Seguridad y Salud en el Trabajo Planes, Programas, Capacitaciones, Inspección, Brigada, Matriz IPERC, Mapa de Riesgos</p>
                             
-                            <p>✍️ Solo escribe lo que estás buscando
-                            El asistente te mostrará el contenido o te permitirá descargarlo.</p>
+                            <p className="mb-4">✍️ Solo escribe lo que estás buscando El asistente te mostrará el contenido o te permitirá descargarlo.</p>
                             
                             <p>🔎 Menos tiempo buscando.</p>
                             <p>⚡ Más eficiencia operativa.</p>
-                            <p>✅ Información confiable al instante.</p>
+                            <p className="mb-4">✅ Información confiable al instante.</p>
                             
-                            <p>¿No sabes cómo empezar? Consulta los ejemplos de búsqueda haciendo clic aquí.</p>
+                            <p className="mb-4">¿No sabes cómo empezar? Consulta los ejemplos de búsqueda haciendo clic <a href="https://pulsosalud.com/" target="_blank" rel="noopener noreferrer" className="text-aws-sea-blue-light underline hover:text-aws-sea-blue-dark cursor-pointer">aquí</a>.</p>
                       </div>
                     </>
                   )}
@@ -709,6 +703,8 @@ const ChatPage: React.FC = () => {
         )}
         {messages.length === 0 && (
           <div className="mb-3 flex w-11/12 flex-wrap-reverse justify-start gap-2 md:w-10/12 lg:w-4/6 xl:w-3/6">
+           
+            <div className="py-32"><br/><br/><br/><br/></div>
             {bot?.conversationQuickStarters?.map((qs, idx) => (
               <div
                 key={idx}
