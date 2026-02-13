@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define Amplify theme variable globally */
+:root {
+  --amplify-components-button-primary-background-color: #4f9e4b;
+}
+
+/* tailwindの設定で上書きされてしまうので、importantを設定する */
+.amplify-button--primary {
+  background-color:  #4f9e4b !important;
+}
+
+/* styles/globals.css もしくは該当コンポーネントのCSS */
+@keyframes liner-progress {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-liner-progress {
+  animation: liner-progress 1s linear infinite;
+}
+/* Forcing line breaks in code blocks */
+.prose pre {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  max-width: 100% !important;
+}
+
+/* Additional styling for code blocks */
+.code-block-wrap {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  max-width: 100% !important;
+}
