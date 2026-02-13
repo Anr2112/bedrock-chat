@@ -340,10 +340,8 @@ const ChatPage: React.FC = () => {
   useLayoutEffect(() => {
     if (messages.length > 0) {
       scrollToBottom();
-    } else {
-      scrollToTop();
     }
-  }, [messages, scrollToBottom, scrollToTop]);
+  }, [messages, scrollToBottom]);
 
   const { updateStarred } = useBot();
   const onClickBotEdit = useCallback(
@@ -566,17 +564,17 @@ const ChatPage: React.FC = () => {
               role="presentation"
               className="flex h-full flex-col overflow-auto pb-16">
               {messages?.length === 0 ? (
-                <div className="relative mb-[45vh]  flex w-full flex-col items-center justify-center">
+                <div className="relative flex w-full flex-col items-center justify-start pt-20 pb-96 px-4 min-h-screen">
                   {!loadingConversation && (
                     <>
-                      <div className="absolute top-0 right-auto mt-4 z-20">
+                      <div className="absolute top-0 left-4 mt-4 z-20">
                         <SwitchBedrockModel
                           className="w-min"
                           activeModels={activeModels}
                           botId={botId}
                         />                        
                       </div>
-                      <div id='dummytext' className="absolute top-16 z-10 w-11/12 md:w-10/12 lg:w-4/6 xl:w-3/6 text-sm mt-6 rounded bg-aws-squid-ink-light/5 p-4 text-black dark:bg-aws-squid-ink-dark/5">
+                      <div id='dummytext' className="w-11/12 md:w-10/12 lg:w-4/6 xl:w-3/6 text-sm mb-8 rounded bg-aws-squid-ink-light/5 p-4 text-black dark:bg-aws-squid-ink-dark/5">
                           <div className="font-bold">🚀 Bienvenido al Asistente Corporativo de Pulso Salud </div>
                             <p>Tu acceso inteligente a la documentación oficial y vigente de la organización.</p>
                             
@@ -602,7 +600,7 @@ const ChatPage: React.FC = () => {
                       </div>
                     </>
                   )}
-                  <div className="px-20 text-center">
+                  <div className="w-full px-20 text-center">
                     <div className="text-lg font-bold">
                       {isLoadingBot && botId && (
                         <Skeleton className="h-5 w-32" />
@@ -690,7 +688,7 @@ const ChatPage: React.FC = () => {
       <div
         className={twMerge(
           'bottom-0 z-0 flex w-full flex-col items-center justify-center',
-          messages.length === 0 ? 'absolute top-2/3 -translate-y-1/2' : ''
+          messages.length === 0 ? 'relative' : ''
         )}>
         {bot && bot.syncStatus !== SyncStatus.SUCCEEDED && (
           <div className="mb-8 w-1/2">
@@ -702,9 +700,7 @@ const ChatPage: React.FC = () => {
           </div>
         )}
         {messages.length === 0 && (
-          <div className="mb-3 flex w-11/12 flex-wrap-reverse justify-start gap-2 md:w-10/12 lg:w-4/6 xl:w-3/6">
-           
-            <div className="py-32"><br/><br/><br/><br/></div>
+          <div className="mb-3 flex w-11/12 flex-wrap justify-center gap-2 md:w-10/12 lg:w-4/6 xl:w-3/6">
             {bot?.conversationQuickStarters?.map((qs, idx) => (
               <div
                 key={idx}
