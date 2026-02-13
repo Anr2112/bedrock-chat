@@ -473,7 +473,7 @@ const ChatPage: React.FC = () => {
       onDrop={endDnd}
       onDragEnd={endDnd}>
       <div className="flex-1 overflow-hidden">
-        <div className="sticky top-0 z-10 mb-1.5 flex h-14 w-full items-center justify-between border-b border-gray bg-aws-paper-light p-2 dark:bg-aws-paper-dark">
+        <div className="sticky top-0 z-10 mb-1.5 flex h-16 w-full items-center justify-between border-b border-gray bg-aws-paper-light p-2 dark:bg-aws-paper-dark">
           <div className="flex w-full items-center">
             <div className="p-2">
               <div className="flex items-center whitespace-nowrap font-bold">
@@ -488,6 +488,9 @@ const ChatPage: React.FC = () => {
                     {pageTitle}
                   </>
                 )}
+              </div>
+              <div className="text-xs text-dark-gray dark:text-light-gray">
+                Plataforma de asistencia corporativa inteligente
               </div>
             </div>
             
@@ -547,10 +550,10 @@ const ChatPage: React.FC = () => {
           <img 
             src="/images/pulso_salud_original.svg" 
             alt="Pulso Salud" 
-            className="absolute left-1/2 -translate-x-1/2 h-10 object-contain"
+            className="absolute right-2 top-2 h-8 object-contain"
           />
           {getPostedModel() && (
-            <div className="absolute right-2 top-10 text-xs text-dark-gray dark:text-light-gray">
+            <div className="absolute right-2 top-11 text-xs text-dark-gray dark:text-light-gray">
               model: {getPostedModel()}
             </div>
           )}
@@ -574,14 +577,34 @@ const ChatPage: React.FC = () => {
                         />                        
                       </div>
                       <div id='dummytext' className="absolute top-16 w-11/12 md:w-10/12 lg:w-4/6 xl:w-3/6 text-sm mt-6 rounded bg-aws-squid-ink-light/5 p-4 text-black dark:bg-aws-squid-ink-dark/5">
-                          <div className="font-bold">What is Lorem Ipsum?</div>
-                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                          when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                          It has survived not only five centuries, but also the leap into electronic typesetting, 
-                          remaining essentially unchanged. It was popularised in the 1960s with the release of 
-                          Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
-                          like Aldus PageMaker including versions of Lorem Ipsum.
+                          <div className="font-bold">🚀 Bienvenido al Asistente Corporativo de Pulso Salud </div>
+                            <p>Tu acceso inteligente a la documentación oficial y vigente de la organización.</p>
+                            
+                            <p>Encuentra en segundos la información que necesitas:</p>
+                            
+                            <p>📁 Documentos del Sistema Integrado de Gestión (SIG) 
+                            Políticas, Procedimientos, Instructivos, Formatos, Planes, Programas, y más.</p>
+                            
+                            <p>⚙️ Calibración y mantenimiento de Equipos Médicos
+                            Información sobre con los certificados de calibración y mantenimiento de los equipos médicos de todas las sedes.</p>  
+                            
+                            <p>👩‍⚕️ Documentos o legajos de nuestros talentos
+                            CVs, Habilidades, Certificados de Trabajo.</p>
+                            
+                            <p>📜 Licencias y permisos
+                            Documentación legal vigente</p>
+                            
+                            <p>🛡️ Auditorías de Seguridad y Salud en el Trabajo
+                            Planes, Programas, Capacitaciones, Inspección, Brigada, Matriz IPERC, Mapa de Riesgos</p>
+                            
+                            <p>✍️ Solo escribe lo que estás buscando
+                            El asistente te mostrará el contenido o te permitirá descargarlo.</p>
+                            
+                            <p>🔎 Menos tiempo buscando.</p>
+                            <p>⚡ Más eficiencia operativa.</p>
+                            <p>✅ Información confiable al instante.</p>
+                            
+                            <p>¿No sabes cómo empezar? Consulta los ejemplos de búsqueda haciendo clic aquí.</p>
                       </div>
                     </>
                   )}

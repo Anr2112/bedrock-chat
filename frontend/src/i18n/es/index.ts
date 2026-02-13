@@ -9,14 +9,38 @@ const translation = {
       name: 'PIA',
       name2: 'Pulso Index IA',
       inputMessage: 'Enviar un mensaje',
+      myBots: 'Mis Bots',
+      discoverBots: 'Descubrir Bots',
       pinnedBots: 'Bots Fijados',
       starredBots: 'Bots Favoritos',
       recentlyUsedBots: 'Bots Usados Recientemente',
-      conversationHistory: 'Historial',
+      conversationHistory: 'Chats Recientes',
       chatWaitingSymbol: '▍',
-      adminConsoles: 'Solo Administrador',
+      adminConsoles: 'Panel de Administrador',
+      backChat: 'Volver al Chat',
+      userGroups: 'Grupos de Usuarios',
     },
     model: {
+      'claude-v4-opus': {
+        label: 'Claude 4 (Opus)',
+        description:
+          'Potente modelo de razonamiento híbrido para tareas complejas, codificación y agentes de IA con ventana de contexto de 200K tokens.',
+      },
+      'claude-v4-sonnet': {
+        label: 'Claude 4 (Sonnet)',
+        description:
+          'Modelo de razonamiento híbrido equilibrado optimizado para eficiencia a escala con ventana de contexto de 200K tokens.',
+      },
+      'claude-v4.5-sonnet': {
+        label: 'Claude 4.5 (Sonnet)',
+        description:
+          'La última versión del modelo Sonnet que logra el más alto nivel de rendimiento en codificación y procesamiento de tareas extendidas',
+      },
+      'claude-v4.5-haiku': {
+        label: 'Claude 4.5 (Haiku)',
+        description:
+          'El modelo Haiku más rápido e inteligente con rendimiento casi fronterizo y capacidades de pensamiento extendidas',
+      },
       'claude-v3-haiku': {
         label: 'Claude 3 (Haiku)',
         description:
@@ -31,6 +55,11 @@ const translation = {
         label: 'Claude 3.5 (Sonnet) v2',
         description:
           'La última versión de Claude 3.5. Un modelo mejorado que supera a la v1 en precisión y rendimiento.',
+      },
+      'claude-v3.7-sonnet': {
+        label: 'Claude 3.7 Sonnet',
+        description:
+          'Modelo de razonamiento híbrido que equilibra respuestas rápidas y capacidades analíticas profundas.',
       },
       'claude-v3.5-haiku': {
         label: 'Claude 3.5 (Haiku)',
@@ -53,12 +82,68 @@ const translation = {
       },
       'mistral-7b-instruct': {
         label: 'Mistral 7B',
+        description:
+          'Soporta tareas de generación de texto en inglés con capacidades naturales de codificación',
       },
       'mixtral-8x7b-instruct': {
         label: 'Mistral-8x7B',
+        description:
+          'Un modelo popular y de alta calidad, Mixture-of-Experts (MoE) disperso, ideal para resumen de texto, preguntas y respuestas, clasificación de texto, completación de texto y generación de código.',
       },
       'mistral-large': {
-        label: 'Mistral Grande',
+        label: 'Mistral Large',
+        description:
+          'Ideal para tareas complejas que requieren capacidades de razonamiento sustanciales, o aquellas altamente especializadas, como Generación de Texto Sintético o Generación de Código.',
+      },
+      'mistral-large-2': {
+        label: 'Mistral Large2',
+        description:
+          'LLM avanzado que soporta docenas de idiomas y más de 80 lenguajes de codificación, con capacidades agentivas de clase mundial incluyendo llamadas a funciones nativas, salida JSON y razonamiento.',
+      },
+      'amazon-nova-pro': {
+        label: 'Amazon Nova Pro',
+        description:
+          'Un modelo multimodal altamente capaz con la mejor combinación de precisión, velocidad y costo para una amplia gama de tareas.',
+      },
+      'amazon-nova-lite': {
+        label: 'Amazon Nova Lite',
+        description:
+          'Un modelo multimodal de muy bajo costo que es extremadamente rápido para procesar entradas de imagen, video y texto.',
+      },
+      'amazon-nova-micro': {
+        label: 'Amazon Nova Micro',
+        description:
+          'Un modelo solo de texto que ofrece las respuestas de menor latencia en la familia de modelos Amazon Nova a un costo muy bajo.',
+      },
+      'deepseek-r1': {
+        label: 'DeepSeek R1',
+        description:
+          'Modelo de razonamiento de vanguardia optimizado para razonamiento general, matemáticas, ciencias y generación de código. Soporta idiomas inglés y chino.',
+      },
+      'llama3-3-70b-instruct': {
+        label: 'Meta Llama 3.3 70B Instruct',
+        description:
+          'Último modelo Llama 3 que ofrece rendimiento a la par del modelo 405B a un menor costo con excelentes capacidades de razonamiento y seguimiento de instrucciones.',
+      },
+      'llama3-2-1b-instruct': {
+        label: 'Meta Llama 3.2 1B Instruct',
+        description:
+          'Modelo ligero optimizado para dispositivos perimetrales con procesamiento eficiente en el dispositivo para gestión de información personal y recuperación de conocimiento multilingüe.',
+      },
+      'llama3-2-3b-instruct': {
+        label: 'Meta Llama 3.2 3B Instruct',
+        description:
+          'Modelo compacto que ofrece generación de texto, resumen y análisis de sentimientos con baja latencia, ideal para aplicaciones móviles de IA.',
+      },
+      'llama3-2-11b-instruct': {
+        label: 'Meta Llama 3.2 11B Instruct',
+        description:
+          'Modelo multimodal que sobresale en comprensión de imágenes y razonamiento visual para subtitulado de imágenes, respuesta a preguntas visuales y procesamiento de documentos.',
+      },
+      'llama3-2-90b-instruct': {
+        label: 'Meta Llama 3.2 90B Instruct',
+        description:
+          'Modelo multimodal grande con capacidades avanzadas de comprensión de imágenes y razonamiento visual para aplicaciones sofisticadas de inteligencia visual.',
       },
       'gpt-oss-20b': {
         label: 'GPT-OSS 20B',
@@ -118,6 +203,42 @@ const translation = {
         internet_search: {
           name: 'Búsqueda en Internet',
           description: 'Buscar información en internet.',
+          settings: 'Configuración de Búsqueda',
+          engine: 'Motor de Búsqueda',
+          engines: {
+            duckduckgo: {
+              label: 'DuckDuckGo (Para Prueba)',
+              hint: 'Límite de tasa limitado, pero gratuito. Diseñado para uso de prueba.',
+            },
+            firecrawl: {
+              label: 'Firecrawl (Para Negocios)',
+              hint: 'Los límites de tasa se pueden expandir. Diseñado para uso empresarial. Se requiere clave API. https://www.firecrawl.dev/',
+            },
+          },
+        },
+        knowledge_base_tool: {
+          name: 'Recuperar Conocimiento',
+          description: 'Recuperar información del conocimiento.',
+        },
+        bedrock_agent: {
+          name: 'Agente Bedrock',
+          description: 'Hacer una pregunta al Agente Bedrock configurado',
+        },
+        firecrawl: {
+          apiKey: 'Clave API de Firecrawl',
+          maxResults: 'Resultados Máximos',
+        },
+        bedrockAgent: {
+          name: 'Agente Bedrock',
+          description: 'Usar Agente Bedrock como herramienta.',
+          agentId: {
+            label: 'ID del Agente',
+            placeholder: 'Ingresar ID del Agente',
+          },
+          aliasId: {
+            label: 'ID del Alias',
+            placeholder: 'Ingresar ID del Alias',
+          },
         },
       },
     },
@@ -131,13 +252,14 @@ const translation = {
         sitemap: 'URL del Sitemap',
         file: 'Archivo',
         loadingBot: 'Cargando...',
-        normalChat: 'Chat',
+        normalChat: 'PIA - Pulso Index IA',
         notAvailableBot: '[NO Disponible]',
         notAvailableBotInputMessage: 'Este bot NO está disponible.',
         noDescription: 'Sin Descripción',
         notAvailable: 'Este bot NO está disponible.',
         noBots: 'No hay Bots.',
-        noBotsRecentlyUsed: 'No hay Bots Compartidos Usados Recientemente.',
+        noBotsRecentlyUsed: 'No hay Bots Usados Recientemente.',
+        noStarredBots: 'No hay Bots Favoritos.',
         retrievingKnowledge: '[Recuperando Conocimiento...]',
         dndFileUpload:
           'Puedes subir archivos arrastrándolos y soltándolos.\nArchivos soportados: {{fileExtensions}}',
@@ -165,7 +287,9 @@ const translation = {
       titleSubmenu: {
         edit: 'Editar',
         copyLink: 'Copiar Enlace',
-        copiedLink: 'Enlace Copiado',
+        copiedLink: 'Copiado',
+        markAsEssential: 'Marcar como Esencial',
+        removeEssential: 'Eliminar Estado Esencial',
       },
       help: {
         overview:
@@ -235,6 +359,11 @@ Las categorías de clasificación son:
       },
       edit: {
         pageTitle: 'Editar Mi Bot',
+      },
+      my: {
+        label: {
+          pageTitle: 'Mis Bots',
+        },
       },
 
       item: {
@@ -346,6 +475,8 @@ Las categorías de clasificación son:
         copied: 'Copiado',
         instructionsSamples: 'Ejemplos',
         chooseFiles: 'Elegir archivos',
+        viewAll: 'Ver Todos',
+        removeFromRecent: 'Eliminar del Historial',
       },
       deleteDialog: {
         title: '¿Eliminar?',
@@ -353,13 +484,42 @@ Las categorías de clasificación son:
       },
       shareDialog: {
         title: 'Compartir',
+        switchLabel: 'Compartir este Bot',
+        label: {
+          selectShare: 'Compartir con',
+          all: 'TODOS los Usuarios',
+          partial: 'Usuarios Seleccionados',
+          search: 'Buscar Usuarios y Grupos',
+          noSearchResults: 'No se encontraron resultados',
+          memberManagement: 'Editar Miembros',
+          sharing: {
+            not_shared: 'No compartido con ningún grupo o usuario',
+            shared_only_users: 'Compartido con {{count}} usuario',
+            shared_only_users_plural: 'Compartido con {{count}} usuarios',
+            shared_only_groups: 'Compartido con {{count}} grupo',
+            shared_only_groups_plural: 'Compartido con {{count}} grupos',
+            shared_both: 'Compartido con {{groupCount}} grupo y {{userCount}} usuario',
+            shared_both_user_plural: 'Compartido con {{groupCount}} grupo y {{userCount}} usuarios',
+            shared_both_group_plural: 'Compartido con {{groupCount}} grupos y {{userCount}} usuario',
+            shared_both_plural: 'Compartido con {{groupCount}} grupos y {{userCount}} usuarios',
+          },
+          user: 'Usuario',
+          group: 'Grupo',
+        },
         off: {
-          content:
-            'La compartición de enlaces está desactivada, por lo que solo tú puedes acceder a este bot a través de su URL.',
+          content: 'Este bot es privado y solo tú tienes acceso a él.',
         },
         on: {
           content:
-            'La compartición de enlaces está activada, por lo que TODOS los usuarios pueden usar este enlace para conversar.',
+            'Este bot está compartido y es accesible para otros usuarios. Los usuarios compartidos pueden encontrar y usar este bot a través de la página <Link>Descubrir Bot</Link>.',
+          linkDescription:
+            'También puedes chatear con el bot usando este enlace compartido.',
+        },
+        button: {
+          manage: 'Gestionar',
+          removeAccess: 'Eliminar Acceso',
+          cancelRemoval: 'Cancelar Eliminación',
+          cancelAddition: 'Cancelar Adición',
         },
       },
       error: {
@@ -367,11 +527,22 @@ Las categorías de clasificación son:
         duplicatedFile: 'Un archivo con el mismo nombre ya ha sido subido.',
         failDeleteApi: 'No se pudo eliminar la API.',
       },
+      activeModels: {
+        title: 'Activación de Modelos',
+        description: 'Configura qué modelos de IA se pueden usar con este bot.',
+      },
+      promptCaching: {
+        title: 'Caché de Prompts',
+        promptCachingEnabled: {
+          title: 'Usar caché de prompts si el modelo lo soporta.',
+          description: 'Si está habilitado, puede reducir el costo y la latencia de conversaciones repetidas con este bot.',
+        },
+      },
     },
     admin: {
       botAnalytics: {
         label: {
-          pageTitle: 'Analíticas de Bot',
+          pageTitle: 'Analítica de Bots',
           noBotUsages: 'Durante el Período de Cálculo, no se utilizaron bots.',
           published: 'La API está publicada.',
           SearchCondition: {
@@ -382,8 +553,7 @@ Las categorías de clasificación son:
           sortByCost: 'Ordenar por Costo',
         },
         help: {
-          overview:
-            'Monitorea el estado de uso de Bots y APIs de Bots Publicadas.',
+          overview: 'Monitorea el estado de uso de Bots y APIs de Bots Publicadas.',
           calculationPeriod:
             'Si no se establece el Período de Cálculo, se mostrará el costo de hoy.',
         },
@@ -398,7 +568,7 @@ Las categorías de clasificación son:
       botManagement: {
         label: {
           pageTitle: 'Gestión de Bots',
-          sharedUrl: 'URL del Bot Compartido',
+          sharedUrl: 'URL del Bot',
           apiSettings: 'Configuración de Publicación de API',
           noKnowledge: 'Este bot no tiene Conocimiento.',
           notPublishApi: 'La API de este bot no está publicada.',
@@ -414,6 +584,9 @@ Las categorías de clasificación son:
             'El cliente puede realizar <Bold>{{limit}}</Bold> solicitudes concurrentes a la API.',
           requestsLimit:
             'Puedes hacer <Bold>{{limit}}</Bold> solicitudes <Bold>{{period}}</Bold>.',
+          sharedAllUsers: 'Compartido con TODOS los Usuarios',
+          privateBot: 'Este bot no está compartido.',
+          owner: 'Propietario',
         },
         alert: {
           noApiKeys: {
@@ -463,8 +636,9 @@ Las categorías de clasificación son:
     },
     button: {
       newChat: 'Nuevo Chat',
+      backToConversationHistory: 'Volver al Historial de Chat',
       botConsole: 'Consola de Bot',
-      botAnalytics: 'Analíticas de Bot',
+      botAnalytics: 'Analítica de Bots Compartidos',
       apiManagement: 'Gestión de API',
       userUsages: 'Usos de Usuario',
       SaveAndSubmit: 'Guardar y Enviar',
@@ -482,7 +656,10 @@ Las categorías de clasificación son:
       signOut: 'Cerrar sesión',
       close: 'Cerrar',
       add: 'Agregar',
-      continue: 'Continuar generando',
+      continue: 'Continuar Generando',
+      botManagement: 'Gestión de Bots',
+      mode: 'Modo',
+      drawerOption: 'Opciones del Menú Lateral',
     },
     input: {
       hint: {
@@ -538,7 +715,7 @@ Las categorías de clasificación son:
     generationConfig: {
       title: 'Configuración de Generación',
       description:
-        ' Puedes configurar los parámetros de inferencia de LLM para controlar la respuesta de los modelos.',
+        'Puedes configurar los parámetros de inferencia de LLM para controlar la respuesta de los modelos.',
       maxTokens: {
         label: 'Longitud máxima de generación/nuevos tokens máximos',
         hint: 'El número máximo de tokens permitidos en la respuesta generada',
@@ -561,6 +738,11 @@ Las categorías de clasificación son:
       stopSequences: {
         label: 'Token de finalización/secuencia de finalización',
         hint: 'Especifica secuencias de caracteres que detienen al modelo de generar más tokens. Usa comas para separar múltiples palabras',
+      },
+      budgetTokens: {
+        label: 'Tokens de Presupuesto de Razonamiento',
+        hint: 'El número máximo de tokens a asignar para pasos de razonamiento. Valores mayores permiten razonamiento más complejo pero pueden aumentar el tiempo de respuesta',
+        help: 'Establece el presupuesto de tokens para pasos de razonamiento. No puede exceder el valor de Máx. Tokens.',
       },
     },
     searchSettings: {
@@ -667,12 +849,76 @@ Las categorías de clasificación son:
         token_filter: 'Filtro de Token:',
         not_specified: 'No especificado',
       },
+      advancedParsing: {
+        label: 'Análisis Avanzado',
+        description:
+          'Selecciona un modelo para usar capacidades de análisis avanzado de documentos.',
+        hint: 'Adecuado para analizar más que texto estándar en formatos de documento soportados, incluyendo tablas dentro de PDFs con su estructura intacta. Se incurren costos adicionales por el análisis usando IA generativa.',
+      },
+      parsingModel: {
+        label: 'Modelo de Análisis Avanzado',
+        none: {
+          label: 'Deshabilitado',
+          hint: 'No se aplicará análisis avanzado.',
+        },
+        claude_3_5_sonnet_v1: {
+          label: 'Claude 3.5 Sonnet v1',
+          hint: 'Usar Claude 3.5 Sonnet v1 para análisis avanzado de documentos.',
+        },
+        claude_3_haiku_v1: {
+          label: 'Claude 3 Haiku v1',
+          hint: 'Usar Claude 3 Haiku v1 para análisis avanzado de documentos.',
+        },
+      },
+      webCrawlerConfig: {
+        title: 'Configuración del Rastreador Web',
+        crawlingScope: {
+          label: 'Alcance del Rastreo',
+          default: {
+            label: 'Predeterminado',
+            hint: 'Limitar el rastreo a páginas web que pertenecen al mismo host y con la misma ruta URL inicial. Por ejemplo, con una URL semilla de "https://aws.amazon.com/bedrock/" solo se rastreará esta ruta y páginas web que se extiendan desde esta ruta, como "https://aws.amazon.com/bedrock/agents/". URLs hermanas como "https://aws.amazon.com/ec2/" no se rastrean, por ejemplo.',
+          },
+          subdomains: {
+            label: 'Subdominios',
+            hint: 'Incluir rastreo de cualquier página web que tenga el mismo dominio principal que la URL semilla. Por ejemplo, con una URL semilla de "https://aws.amazon.com/bedrock/" entonces cualquier página web que contenga "amazon.com" será rastreada, como "https://www.amazon.com".',
+          },
+          hostOnly: {
+            label: 'Solo Host',
+            hint: 'Limitar el rastreo a páginas web que pertenecen al mismo host. Por ejemplo, con una URL semilla de "https://aws.amazon.com/bedrock/", entonces páginas web con "https://docs.aws.amazon.com" también serán rastreadas, como "https://aws.amazon.com/ec2".',
+          },
+        },
+        includePatterns: {
+          label: 'Patrones de Inclusión',
+          hint: 'Especifica patrones para incluir en el rastreo web. Solo se rastrearán URLs que coincidan con estos patrones.',
+        },
+        excludePatterns: {
+          label: 'Patrones de Exclusión',
+          hint: 'Especifica patrones para excluir del rastreo web. URLs que coincidan con estos patrones no serán rastreadas.',
+        },
+      },
+      advancedConfigration: {
+        existingKnowledgeBaseId: {
+          label: 'ID para la Base de Conocimiento de Amazon Bedrock',
+          description:
+            'Por favor especifica el ID de tu base de conocimiento existente de Amazon Bedrock.',
+        },
+        createDedicatedKnowledgeBase: {
+          label: 'Crear una Base de Conocimiento dedicada',
+        },
+        createTenantInSharedKnowledgeBase: {
+          label: 'Crear un inquilino en una Base de Conocimiento compartida',
+        },
+        useExistingKnowledgeBase: {
+          label: 'Usar tu Base de Conocimiento existente',
+        },
+      },
     },
     error: {
       answerResponse: 'Ocurrió un error mientras se respondía.',
       notFoundConversation:
         'Dado que el chat especificado no existe, se muestra una nueva pantalla de chat.',
       notFoundPage: 'La página que buscas no se encontró.',
+      cannotAccessBot: 'No se puede acceder a este bot. Redirigido a Nuevo Chat.',
       unexpectedError: {
         title: 'Ocurrió un error inesperado.',
         restore: 'Ir a la página PRINCIPAL',
@@ -692,6 +938,19 @@ Las categorías de clasificación son:
           'El tamaño de cada documento no debe superar {{maxSize}}.',
         fileCountExceeded: 'No se pudo subir más de {{maxCount}} archivos.',
       },
+      share: {
+        markedEssential: {
+          title: 'No se puede Cambiar la Configuración de Compartir',
+          content:
+            'Este bot está marcado como Esencial por el administrador. Los bots Esenciales deben ser compartidos con todos los usuarios.',
+        },
+        publication: {
+          title: 'No se puede Cambiar la Configuración de Compartir',
+          content:
+            'Este bot está publicado como API por el administrador. Las API publicadas deben ser compartidas con todos los usuarios.',
+        },
+      },
+      invalidMermaidFormat: 'Error en el dibujo del diagrama',
     },
     validation: {
       title: 'Error de Validación',
@@ -700,6 +959,9 @@ Las categorías de clasificación son:
       },
       minRange: {
         message: 'El valor mínimo que se puede configurar es {{size}}',
+      },
+      maxBudgetTokens: {
+        message: 'El maxBudgetToken no puede exceder los maxTokens {{size}}',
       },
       chunkOverlapLessThanChunkSize: {
         message:
@@ -712,6 +974,10 @@ Las categorías de clasificación son:
         message:
           'Por favor, introduce tanto el Título como el Ejemplo de Conversación.',
       },
+      required: '{{key}} es requerido',
+      number: {
+        greaterThen: '{{key}} debe ser mayor que {{value}}',
+      },
     },
     helper: {
       shortcuts: {
@@ -720,6 +986,14 @@ Las categorías de clasificación son:
           focusInput: 'Enfocar entrada de chat',
           newChat: 'Abrir nuevo chat',
         },
+      },
+    },
+    reasoning: {
+      button: {
+        label: 'Razonamiento',
+      },
+      card: {
+        label: 'Proceso de Razonamiento',
       },
     },
     guardrails: {

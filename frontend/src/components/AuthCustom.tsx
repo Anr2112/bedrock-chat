@@ -18,6 +18,7 @@ type Props = BaseProps & {
 const AuthCustom: React.FC<Props> = ({ children }) => {
   const [authenticated, setAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [signingIn, setSigningIn] = useState(false);
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -34,6 +35,7 @@ const AuthCustom: React.FC<Props> = ({ children }) => {
   }, []);
 
   const handleSignIn = () => {
+    setSigningIn(true);
     signInWithRedirect({
       provider: {
         custom: import.meta.env.VITE_APP_CUSTOM_PROVIDER_NAME,
@@ -59,8 +61,22 @@ const AuthCustom: React.FC<Props> = ({ children }) => {
           <div className="mb-5 mt-10 whitespace-pre-line text-center text-4xl text-aws-sea-blue-light">
             {t('app.name')}
           </div>
-          <Button onClick={() => handleSignIn()} className="px-20 text-xl">
-            {t('signIn.button.login')}
+          <Button 
+            onClick={() => handleSignIn()} 
+            className="px-20 text-xl"
+            disabled={signingIn}
+            outlined={signingIn}
+          >
+            {signingIn ? (
+              <div className="flex items-center gap-2">
+                <div className="animate-spin">
+                  <PiCircleNotch size={20} />
+                </div>
+                <span>{t('signIn.button.login')}</span>
+              </div>
+            ) : (
+              t('signIn.button.login')
+            )}
           </Button>
         </div>
       ) : (

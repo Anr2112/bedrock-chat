@@ -287,105 +287,105 @@ const translation = {
         edit: 'Edit',
         copyLink: 'Copy Link',
         copiedLink: 'Copied',
-        markAsEssential: 'Mark as Essential',
-        removeEssential: 'Remove Essential Status',
+        markAsEssential: 'Marcar como esencial',
+        removeEssential: 'Eliminar estado esencial',
       },
       help: {
         overview:
-          'Bots operate according to predefined instructions. Chat does not work as intended unless the context is defined in the message, but with bots, there is no need to define the context.',
+          'Los bots funcionan según instrucciones predefinidas. El chat no funciona como se espera a menos que se defina el contexto en el mensaje, pero con los bots no es necesario definir el contexto.',
         instructions:
-          'Define how the bot should behave. Giving ambiguous instructions may lead to unpredictable movements, so provide clear and specific instructions.',
+          'Defina cómo debe comportarse el bot. Dar instrucciones ambiguas puede provocar movimientos impredecibles, por lo que debe proporcionar instrucciones claras y específicas.',
         knowledge: {
           overview:
-            'By providing external knowledge to the bot, it becomes able to handle data that it has not been pre-trained on.',
-          url: 'The information from the specified URL will be used as Knowledge.',
+            'Al proporcionar conocimientos externos al bot, este es capaz de manejar datos para los que no ha sido entrenado previamente.',
+          url: 'La información de la URL especificada se utilizará como conocimiento.',
           s3url:
-            'By entering the S3 URI, you can add S3 as a data source. You can add up to 4 sources. It only supports buckets that exist in the same account and the same region as bedrock region.',
+            'Al introducir el URI de S3, puede añadir S3 como fuente de datos. Puede añadir hasta 4 fuentes. Solo admite buckets que existan en la misma cuenta y la misma región que la región Bedrock.',
           sitemap:
-            'By specifying the URL of the sitemap, the information obtained through automatically scraping websites within it will be used as Knowledge.',
-          file: 'The uploaded files will be used as Knowledge.',
+            'Al especificar la URL del mapa del sitio, la información obtenida mediante el rastreo automático de los sitios web que lo componen se utilizará como conocimiento.',
+          file: 'Los archivos subidos se utilizarán como conocimiento.',
           citeRetrievedContexts:
-            'Configure whether to display context retrieved to answer user queries as citation information.\nIf enabled, users can access the original source URLs or files.',
+            'Configure si se debe mostrar el contexto recuperado para responder a las consultas de los usuarios como información de citación.\nSi está habilitado, los usuarios pueden acceder a las URL o archivos de origen originales.',
         },
         quickStarter: {
           overview:
-            'When starting a conversation, provide examples. Examples illustrate how to use the bot.',
+            'Al iniciar una conversación, proporcione ejemplos. Los ejemplos ilustran cómo usar el bot.',
         },
       },
       alert: {
         sync: {
           error: {
-            title: 'Knowledge Sync Error',
-            body: 'An error occurred while synchronizing Knowledge. Please check the following message:',
+            title: 'Error de sincronización del conocimiento',
+            body: 'Ocurrió un error al sincronizar el conocimiento. Por favor, revise el siguiente mensaje:',
           },
           incomplete: {
-            title: 'NOT Ready',
-            body: 'This bot has not completed the knowledge synchronization, so the knowledge before the update is used.',
+            title: 'No listo',
+            body: 'Este bot no ha completado la sincronización del conocimiento, por lo que se utiliza el conocimiento anterior a la actualización.',
           },
         },
       },
       samples: {
-        title: 'Instructions Samples',
+        title: 'Instrucciones de ejemplo',
         anthropicLibrary: {
-          title: 'Anthropic Prompt Library',
-          sentence: 'Do you need more examples? Visit: ',
+          title: 'Biblioteca de Prompts de Anthropic',
+          sentence: '¿Necesita más ejemplos? Visite: ',
           url: 'https://docs.anthropic.com/claude/prompt-library',
         },
         pythonCodeAssistant: {
-          title: 'Python Coding Assistant',
-          prompt: `Write a short and high-quality python script for the given task, something a very skilled python expert would write. You are writing code for an experienced developer so only add comments for things that are non-obvious. Make sure to include any imports required. 
-NEVER write anything before the \`\`\`python\`\`\` block. After you are done generating the code and after the \`\`\`python\`\`\` block, check your work carefully to make sure there are no mistakes, errors, or inconsistencies. If there are errors, list those errors in <error> tags, then generate a new version with those errors fixed. If there are no errors, write "CHECKED: NO ERRORS" in <error> tags.`,
+          title: 'Asistente de Codificación en Python',
+          prompt: `Escriba un script de Python corto y de alta calidad para la tarea dada, algo que un experto en Python muy calificado escribiría. Está escribiendo código para un desarrollador experimentado, por lo que solo agregue comentarios para cosas que no sean obvias. Asegúrese de incluir cualquier importación requerida. 
+NUNCA escriba nada antes del bloque \`\`\`python\`\`\`. Después de generar el código y después del bloque \`\`\`python\`\`\`, revise su trabajo cuidadosamente para asegurarse de que no haya errores, fallos o inconsistencias. Si hay errores, enumere esos errores en etiquetas <error>, luego genere una nueva versión con esos errores corregidos. Si no hay errores, escriba "VERIFICADO: SIN ERRORES" en las etiquetas <error>.`,
         },
         mailCategorizer: {
-          title: 'Mail Categorizer',
-          prompt: `You are a customer service agent tasked with classifying emails by type. Please output your answer and then justify your classification. 
+          title: 'Clasificador de Correos',
+          prompt: `Eres un agente de servicio al cliente encargado de clasificar los correos electrónicos por tipo. Por favor, proporciona tu respuesta y luego justifica tu clasificación.
 
-The classification categories are: 
-(A) Pre-sale question 
-(B) Broken or defective item 
-(C) Billing question 
-(D) Other (please explain)
+Las categorías de clasificación son: 
+(A) Pregunta previa a la venta 
+(B) Artículo roto o defectuoso 
+(C) Pregunta de facturación 
+(D) Otro (por favor explique)
 
-How would you categorize this email?`,
+¿Cómo categorizaría este correo electrónico?`,
         },
         fitnessCoach: {
-          title: 'Personal Fitness Coach',
-          prompt: `You are an upbeat, enthusiastic personal fitness coach named Sam. Sam is passionate about helping clients get fit and lead healthier lifestyles. You write in an encouraging and friendly tone and always try to guide your clients toward better fitness goals. If the user asks you something unrelated to fitness, either bring the topic back to fitness, or say that you cannot answer.`,
+          title: 'Entrenador Personal de Fitness',
+          prompt: `Eres un entrenador personal de fitness optimista y entusiasta llamado Sam. Sam es apasionado por ayudar a los clientes a ponerse en forma y llevar un estilo de vida más saludable. Escribes en un tono alentador y amigable y siempre intentas guiar a tus clientes hacia mejores objetivos de fitness. Si el usuario te pregunta algo no relacionado con el fitness, ya sea que lleves el tema de vuelta al fitness, o digas que no puedes responder.`,
         },
       },
       create: {
-        pageTitle: 'Create My Bot',
+        pageTitle: 'Crear Mi Bot',
       },
       edit: {
-        pageTitle: 'Edit My Bot',
+        pageTitle: 'Editar Mi Bot',
       },
       my: {
         label: {
-          pageTitle: 'My Bots',
+          pageTitle: 'Mis Bots',
         },
       },
       item: {
-        title: 'Name',
-        description: 'Description',
-        instruction: 'Instructions',
+        title: 'Nombre',
+        description: 'Descripción',
+        instruction: 'Instrucciones',
       },
       apiSettings: {
-        pageTitle: 'Shared Bot Publish API Settings',
+        pageTitle: 'Configuración de la API de Publicación de Bots Compartidos',
         label: {
-          endpoint: 'API Endpoint',
-          usagePlan: 'Usage Plan',
-          allowOrigins: 'Allowed Origins',
-          apiKeys: 'API Keys',
+          endpoint: 'Punto de acceso de la API',
+          usagePlan: 'Plan de uso',
+          allowOrigins: 'Orígenes permitidos',
+          apiKeys: 'Claves de API',
           period: {
-            day: 'Per DAY',
-            week: 'Per WEEK',
-            month: 'Per MONTH',
+            day: 'Por DÍA',
+            week: 'Por SEMANA',
+            month: 'Por MES',
           },
           apiKeyDetail: {
-            creationDate: 'Creation date',
-            active: 'Active',
-            inactive: 'Inactive',
-            key: 'API Key',
+            creationDate: 'Fecha de creación',
+            active: 'Activo',
+            inactive: 'Inactivo',
+            key: 'Clave de API',
           },
         },
         item: {
@@ -398,61 +398,61 @@ How would you categorize this email?`,
         },
         help: {
           overview:
-            "Creating an API enables the Bot's functions to be accessed by external clients; APIs enable integration with external applications.",
-          endpoint: 'The client can use the Bot from this endpoint.',
+            "La creación de una API permite que los clientes externos accedan a las funciones del bot; las API permiten la integración con aplicaciones externas.",
+          endpoint: 'El cliente puede usar el bot desde este punto de acceso.',
           usagePlan:
-            'Usage plans specify the number or rate of requests that your API accepts from a client. Associate an API with a usage plan to track the requests your API receives.',
-          throttling: 'Limit the rate that users can call your API.',
+            'Los planes de uso especifican el número o la tasa de solicitudes que su API acepta de un cliente. Asocie una API con un plan de uso para rastrear las solicitudes que recibe su API.',
+          throttling: 'Limite la tasa a la que los usuarios pueden llamar a su API.',
           rateLimit:
-            'Enter the rate, in requests per second, that clients can call your API.',
+            'Ingrese la tasa, en solicitudes por segundo, que los clientes pueden llamar a su API.',
           burstLimit:
-            'Enter the number of concurrent requests that a client can make to your API.',
+            'Ingrese el número de solicitudes concurrentes que un cliente puede hacer a su API.',
           quota:
-            'Turn on quotas to limit the number of requests a user can make to your API in a given time period.',
+            'Active las cuotas para limitar el número de solicitudes que un usuario puede hacer a su API en un período de tiempo determinado.',
           requestLimit:
-            'Enter the total number of requests that a user can make in the time period you select in the dropdown list.',
+            'Ingrese el número total de solicitudes que un usuario puede hacer en el período de tiempo que seleccione en la lista desplegable.',
           allowOrigins:
-            'Allowed client origins for access. If the origin is not allowed, the caller receives a 403 Forbidden response and is denied access to the API. The Origin must follow the format: "(http|https)://host-name" or "(http|https)://host-name:port" and wildcards(*) can be used.',
+            'Orígenes de clientes permitidos para el acceso. Si el origen no está permitido, el llamador recibe una respuesta 403 Forbidden y se le niega el acceso a la API. El origen debe seguir el formato: "(http|https)://nombre-del-host" o "(http|https)://nombre-del-host:puerto" y se pueden usar comodines (*).',  
           allowOriginsExample:
             'e.g. https://your-host-name.com, https://*.your-host-name.com, http://localhost:8000',
           apiKeys:
-            'An API key is an alphanumeric string that used to identify a client of your API. Otherwise, the caller receives a 403 Forbidden response and is denied access to the API.',
+            'Una clave API es una cadena alfanumérica que se utiliza para identificar a un cliente de su API. De lo contrario, el solicitante recibe una respuesta 403 Prohibido y se le deniega el acceso a la API.',
         },
         button: {
-          ApiKeyShow: 'Show',
-          ApiKeyHide: 'Hide',
+          ApiKeyShow: 'Mostrar',
+          ApiKeyHide: 'Ocultar',
         },
         alert: {
           botUnshared: {
-            title: 'Please Share The Bot with All Users',
-            body: 'You cannot publish an API for the bot that is not shared with all users.',
+            title: 'Por favor, comparte el bot con todos los usuarios.',
+            body: 'No puedes publicar una API para el bot que no está compartido con todos los usuarios.',
           },
           deploying: {
-            title: 'The API deployment is in PROGRESS',
-            body: 'Please wait until the deployment is complete.',
+            title: 'El despliegue de la API está EN PROGRESO',
+            body: 'Por favor espera hasta que el despliegue esté completo.',
           },
           deployed: {
-            title: 'The API has been DEPLOYED',
-            body: 'You can access the API from the Client using the API Endpoint and API Key.',
+            title: 'La API ha sido DESPLEGADA',
+            body: 'Puedes acceder a la API desde el Cliente usando el Punto de acceso de la API y la Clave de API.',
           },
           deployError: {
-            title: 'FAILED to deploy the API',
-            body: 'Please delete the API and re-create the API.',
+            title: 'FALLÓ el despliegue de la API',
+            body: 'Por favor elimina la API y vuelve a crearla.',
           },
         },
         deleteApiDaialog: {
-          title: 'Delete?',
+          title: 'Borrar?',
           content:
-            'Are you sure to delete the API? The API endpoint will be deleted, and the client will no longer have access to it.',
+            '¿Estás seguro de que deseas borrar la API? El punto de acceso de la API será eliminado y el cliente ya no tendrá acceso a ella.',
         },
         addApiKeyDialog: {
-          title: 'Add API Key',
-          content: 'Enter a name to identify the API Key.',
+          title: 'Agregar Clave API',
+          content: 'Ingrese un nombre para identificar la Clave API.',
         },
         deleteApiKeyDialog: {
-          title: 'Delete?',
+          title: 'Borrar?',
           content:
-            'Are you sure to delete <Bold>{{title}}</Bold>?\nClients using this API Key will be denied access to the API.',
+            '¿Estás seguro de que deseas borrar <Bold>{{title}}</Bold>?\nLos clientes que usen esta Clave API no tendrán acceso a la API.',
         },
       },
       button: {
@@ -467,7 +467,7 @@ How would you categorize this email?`,
         copied: 'Copied',
         instructionsSamples: 'Samples',
         chooseFiles: 'Choose files',
-        viewAll: 'View All',
+        viewAll: 'Ver Todos',
         removeFromRecent: 'Remove from History',
       },
       deleteDialog: {
@@ -591,7 +591,7 @@ How would you categorize this email?`,
           },
         },
         button: {
-          deleteApi: 'Delete API',
+          deleteApi: 'Eliminar API',
         },
       },
       validationError: {
@@ -599,9 +599,9 @@ How would you categorize this email?`,
       },
     },
     discover: {
-      pageTitle: 'Discover Bot',
+      pageTitle: 'Descubre mas Bots',
       description:
-        'View and search bots that are public or permitted for your access.',
+        'Ver y buscar bots que sean públicos o para los que tengas permiso de acceso.',
       search: {
         placeholder: 'Search Bots',
         searching: 'Searching...',
@@ -623,49 +623,49 @@ How would you categorize this email?`,
         },
       },
       trending: {
-        label: 'Trending',
-        description: 'Most popular Bots.',
+        label: 'Tendencias',
+        description: 'Los Bots más populares.',
       },
       discover: {
-        label: 'Discover',
-        description: 'Random bot showcase.',
+        label: 'Descubrir',
+        description: 'Muestra aleatoria de Bots.',
       },
     },
     conversationHistory: {
-      pageTitle: 'Chat History',
+      pageTitle: 'Historial de Chat',
       label: {
-        noConversations: 'No Chat History',
+        noConversations: 'No hay historial de chat',
       },
       searchConversation: {
-        placeholder: 'Search conversations...',
-        searching: 'Searching...',
-        results: 'Found {{count}} chats matching "{{query}}"',
-        noResults: 'No chats matching for "{{query}}"',
-        tryDifferentKeywords: 'Try different keywords',
-        resultsCount: '{{count}} results found',
+        placeholder: 'Buscar conversaciones...',
+        searching: 'Buscando...',
+        results: 'Se encontraron {{count}} chats que coinciden con "{{query}}"',
+        noResults: 'No se encontraron chats que coincidan con "{{query}}"',
+        tryDifferentKeywords: 'Intenta con diferentes palabras clave',
+        resultsCount: '{{count}} resultados encontrados',
       },
     },
     deleteDialog: {
-      title: 'Delete?',
-      content: 'Are you sure to delete <Bold>{{title}}</Bold>?',
+      title: 'Borrar?',
+      content: '¿Estás seguro de que deseas borrar <Bold>{{title}}</Bold>?',
       pinnedBotError: {
-        title: 'Cannot Delete',
+        title: 'No se puede Borrar',
         content:
-          'This bots is marked as essential. Essential status can be changed by administrator.',
+          'Este bot está marcado como esencial. El administrador puede cambiar el estado esencial.',
       },
     },
     clearDialog: {
-      title: 'Delete ALL?',
-      content: 'Are you sure to delete ALL conversations?',
+      title: '¿Borrar TODO?',
+      content: '¿Estás seguro de que deseas borrar TODAS las conversaciones?',
     },
     languageDialog: {
-      title: 'Switch language',
+      title: 'Cambiar idioma',
     },
     drawerOptionsDialog: {
-      title: 'Side Menu Options',
+      title: 'Opciones del menú lateral',
       label: {
-        visibility: 'Visibility',
-        displayCount: 'Display Count',
+        visibility: 'Visibilidad',
+        displayCount: 'Cantidad a mostrar',
       },
     },
     feedbackDialog: {
