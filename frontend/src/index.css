@@ -12,6 +12,14 @@
   background-color:  #4f9e4b !important;
 }
 
+/* Mantener el color del botón cuando está en estado loading/disabled */
+.amplify-button--primary:disabled,
+.amplify-button--primary[disabled],
+.amplify-button--loading {
+  opacity: 1 !important;
+  background-color: #4f9e4b !important;
+}
+
 /* styles/globals.css もしくは該当コンポーネントのCSS */
 @keyframes liner-progress {
   0% {

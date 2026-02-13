@@ -25,7 +25,8 @@ const Button = forwardRef<HTMLButtonElement, Props>((props, ref) => {
         !props.text &&
           !props.outlined &&
           'bg-aws-sea-blue-light dark:bg-aws-ui-color-dark dark:border-aws-ui-color-dark text-aws-font-color-white-light dark:text-aws-font-color-white-dark',
-        props.disabled || props.loading ? 'opacity-30' : 'hover:brightness-75',
+        props.disabled && !props.loading && 'opacity-30',
+        !props.disabled && !props.loading && 'hover:brightness-75',
         props.className
       )}
       onClick={(e) => {
