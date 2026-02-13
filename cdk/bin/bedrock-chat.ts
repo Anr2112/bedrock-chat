@@ -13,7 +13,7 @@ import { NamingHelper } from "../lib/utils/naming";
 const app = new cdk.App();
 
 // Initialize naming helper with resource prefix
-const resourcePrefix = app.node.tryGetContext("resourcePrefix") || "pulso-salud";
+const resourcePrefix = app.node.tryGetContext("resourcePrefix") || "PULSCRP-IA01-ADOC-ADP";
 export const naming = new NamingHelper(resourcePrefix);
 
 // Specify env name by "envName" context variable
